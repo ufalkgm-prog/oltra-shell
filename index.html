@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>OLTRA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      background: rgba(0,0,0,0.5);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 700px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: white;
+      color: black;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="content"></div>
+
+  <script>
+    const host = window.location.hostname;
+
+    const content = document.getElementById("content");
+
+    if (host.includes("algoville")) {
+      document.body.style.backgroundImage = "url('/bg-algoville.jpg')";
+      content.innerHTML = `
+        <h1>Redefining Luxury Travel</h1>
+        <p>
+          We are building a unique luxury travel service and concierge company — OLTRA.<br>
+          Launch expected during summer 2026.
+        </p>
+        <a class="button" href="https://oltra.dk">Explore OLTRA</a>
+        <p style="margin-top:20px;">
+          <a href="/AgodaPartnerVerification.html" style="color:#ccc;font-size:12px;">
+            Agoda Partner Verification
+          </a>
+        </p>
+      `;
+    } else {
+      document.body.style.backgroundImage = "url('/bg-oltra.jpg')";
+      content.innerHTML = `
+        <h1>OLTRA</h1>
+        <p>
+          Luxury travel redefined.<br>
+          Launch summer 2026.
+        </p>
+      `;
+    }
+  </script>
+</body>
+</html>
