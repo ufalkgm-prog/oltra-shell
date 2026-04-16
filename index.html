@@ -1,9 +1,19 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>OLTRA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OLTRA</title>
+  <script>
+    if (
+      window.location.hostname === "algoville.com" ||
+      window.location.hostname === "www.algoville.com"
+    ) {
+      const meta = document.createElement("meta");
+      meta.name = "agd-partner-manual-verification";
+      document.head.appendChild(meta);
+    }
+  </script>
 
   <style>
     body {
